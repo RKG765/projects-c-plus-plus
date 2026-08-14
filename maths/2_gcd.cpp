@@ -41,6 +41,6 @@ int main(){
     cout<<ptr->gcdOptimal(16,34)<<endl;
     cout<<ptr->gcdIteratieOptimal(16,34)<<endl;
     cout<<ptr->lcm(15,34)<<endl;
-
+    delete ptr;
     return 0;
 }
