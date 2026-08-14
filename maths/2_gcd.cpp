@@ -17,7 +17,7 @@ class GCD{
         if(b==0){
             return a;
         }
-        return gcd(b,a%b);
+        return gcdOptimal(b,a%b);
     }
     //iteratve optimal approach 
     int gcdIteratieOptimal(int a,int b){
@@ -28,6 +28,10 @@ class GCD{
         return a;
     }
 
+    int lcm(int a,int b){
+        return (a*b)/gcdOptimal(a,b);
+    }
+
 };
 int main(){
     GCD *ptr = new GCD;
@@ -36,6 +40,7 @@ int main(){
     cout<<endl;
     cout<<ptr->gcdOptimal(16,34)<<endl;
     cout<<ptr->gcdIteratieOptimal(16,34)<<endl;
+    cout<<ptr->lcm(15,34)<<endl;
 
     return 0;
 }
